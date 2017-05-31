@@ -99,9 +99,7 @@ module.exports = (config) => {
 		// Local tests.
 		karmaConfig.browsers.push(
 			'Chrome',
-			'Firefox',
-			'Safari',
-			'Opera'
+			'Firefox'
 		);
 	}
 
