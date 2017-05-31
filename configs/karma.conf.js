@@ -4,7 +4,7 @@
  * @param config
  */
 const ENV = process.env.ENV;
-module.exports = (config) => {
+module.exports = function(config) {
 	const karmaConfig = {
 		/**
 		 * Base path that will be used to resolve all patterns (eg. files, exclude).
@@ -38,7 +38,11 @@ module.exports = (config) => {
 		webpack: require('./webpack.test.js')(),
 
 		coverageReporter: {
-			type: 'in-memory'
+			dir : './coverage',
+			reporters: [
+				{ type: 'in-memory' },
+				{ type: 'cobertura', subdir: 'cobertura' }
+			]
 		},
 
 		remapCoverageReporter: {
@@ -97,10 +101,7 @@ module.exports = (config) => {
 		karmaConfig.browsers.push('PhantomJS');
 	} else {
 		// Local tests.
-		karmaConfig.browsers.push(
-			'Chrome',
-			'Firefox'
-		);
+		karmaConfig.browsers.push('Chrome');
 	}
 
 	config.set(karmaConfig);
