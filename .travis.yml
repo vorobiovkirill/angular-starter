@@ -8,12 +8,11 @@ addons:
       - google-chrome-stable
 language: node_js
 node_js:
-  - "6"
-  - "node"
-matrix:
-  fast_finish: true
+  - "7"
+  - "8"
+fast_finish: true
 before_install:
-  - npm i npm@^4 -g
+  - npm i npm@^5 -g
 install:
   - npm install
 before_script:
@@ -21,8 +20,9 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - sleep 3
 script:
+  - node -v && npm -v
   - npm run e2e
-  - npm run test
+  - npm run test:build
 cache:
   directories:
     - node_modules
