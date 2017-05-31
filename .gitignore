@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+# Node Files
+/node_modules
+npm-debug.log
+
+# Coverage
+/coverage/
+
+# Dist #
+/dist
+
+# IDE #
+.idea/
+*.swp
