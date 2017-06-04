@@ -117,7 +117,7 @@
     "karma-remap-coverage": "0.1.4",
     "karma-safari-launcher": "1.0.0",
     "karma-sourcemap-loader": "0.3.7",
-    "karma-typescript": "3.0.2",
+    "karma-typescript": "3.0.3",
     "karma-webpack": "2.0.3",
     "npm-run-all": "4.0.2",
     "phantomjs-prebuilt": "2.1.14",
