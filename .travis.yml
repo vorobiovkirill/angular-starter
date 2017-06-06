@@ -22,7 +22,7 @@ before_script:
 script:
   - node -v && npm -v
   - npm run e2e
-  - npm run test:build
+  - npm run test:ci
 cache:
   directories:
     - node_modules
