@@ -106,7 +106,7 @@
     "@types/jasmine": "2.5.51",
     "http-server": "0.10.0",
     "istanbul-instrumenter-loader": "2.0.0",
-    "jasmine-core": "2.6.2",
+    "jasmine-core": "2.6.3",
     "jasmine-spec-reporter": "4.1.0",
     "karma": "1.7.0",
     "karma-coverage": "1.1.1",
