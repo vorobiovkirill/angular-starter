@@ -16,7 +16,7 @@ import { Routes } from './main.routing';
 		RouterModule.forRoot(
 			Routes,
 			{
-				useHash: false,
+				useHash: true,
 				preloadingStrategy: PreloadAllModules,
 			},
 		),
