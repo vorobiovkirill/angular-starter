@@ -9,7 +9,8 @@
       "email": "lehaqs@gmail.com"
     }
   ],
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://angular-starter.netlify.com/",
   "keywords": [
     "angular",
     "typescript"
