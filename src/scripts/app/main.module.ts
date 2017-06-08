@@ -4,7 +4,10 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import { MainComponent } from './main.component';
 import { HomeComponent } from './components/home/home.component';
-import { MathService } from './components/home/math.service';
+import { AboutComponent } from './components/about/about.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MathService } from './services/math.service';
 import { Routes } from './main.routing';
 
 @NgModule({
@@ -12,14 +15,20 @@ import { Routes } from './main.routing';
 		BrowserModule,
 		RouterModule.forRoot(
 			Routes,
-			{useHash: false, preloadingStrategy: PreloadAllModules},
+			{
+				useHash: false,
+				preloadingStrategy: PreloadAllModules,
+			},
 		),
 	],
 	declarations: [
 		MainComponent,
 		HomeComponent,
+		AboutComponent,
+		ContactsComponent,
+		MenuComponent,
 	],
-	providers   : [MathService],
-	bootstrap   : [MainComponent],
+	providers   : [ MathService ],
+	bootstrap   : [ MainComponent ],
 })
 export class MainModule {}
