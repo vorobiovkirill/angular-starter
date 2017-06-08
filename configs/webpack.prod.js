@@ -6,7 +6,6 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const Ngtools = require('@ngtools/webpack');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const ENV = process.env.ENV = process.env.NODE_ENV = 'production';
 

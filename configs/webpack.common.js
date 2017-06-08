@@ -50,7 +50,10 @@ module.exports = function(env) {
 				},
 				{
 					test: /\.html$/,
-					use: 'html-loader'
+					use: 'raw-loader',
+					exclude: [
+						helpers.root('src/index.html')
+					]
 				},
 				{
 					test: /\.(jpg|jpeg|gif|png|svg)$/,
@@ -87,7 +90,7 @@ module.exports = function(env) {
 				title: METADATA.title,
 				env: env,
 				metadata: METADATA,
-				template: './src/index.html.ejs',
+				template: './src/index.html',
 				chunksSortMode: 'dependency',
 				inject: 'body',
 				minify: {
