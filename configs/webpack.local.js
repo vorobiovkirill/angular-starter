@@ -34,6 +34,8 @@ module.exports = function () {
 			}
 		},
 
+		devtool: 'source-map',
+
 		module: {
 			rules: [
 				{
@@ -42,7 +44,7 @@ module.exports = function () {
 						{
 							loader: 'awesome-typescript-loader',
 							query: {
-								sourceMap: false,
+								sourceMap: true,
 								inlineSourceMap: false,
 								compilerOptions: {
 									removeComments: false

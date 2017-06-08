@@ -3,7 +3,6 @@ const path = require('path');
 
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
-const NoErrorsPlugin = require('webpack/lib/NoErrorsPlugin');
 
 const helpers = require('./helpers');
 
