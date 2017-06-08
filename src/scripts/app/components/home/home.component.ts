@@ -5,6 +5,7 @@ import { MathService } from './math.service';
 	selector: 'app-home',
 	template: `
 		<h1>Home</h1>
+		<p>Text from Angular</p>
 	`,
 })
 export class HomeComponent {
