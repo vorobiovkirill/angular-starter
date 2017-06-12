@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MathService } from './services/math.service';
 import { Routes } from './main.routing';
 
@@ -27,6 +28,7 @@ import { Routes } from './main.routing';
 		AboutComponent,
 		ContactsComponent,
 		MenuComponent,
+		NotFoundComponent,
 	],
 	providers   : [ MathService ],
 	bootstrap   : [ MainComponent ],

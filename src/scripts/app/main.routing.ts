@@ -1,6 +1,7 @@
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 export const Routes = [
 	{
@@ -32,5 +33,19 @@ export const Routes = [
 				description: 'Contacts description',
 			},
 		},
+	},
+	{
+		path: '404',
+		component: NotFoundComponent,
+		data: {
+			meta: {
+				title: '404',
+				description: 'Not found',
+			},
+		},
+	},
+	{
+		path: '**',
+		redirectTo: '404',
 	},
 ];
