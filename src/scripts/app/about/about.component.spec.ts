@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { ContactsComponent } from './contacts.component';
+import { AboutComponent } from './about.component';
 
-describe('ContactsComponent', () => {
-	let component: ContactsComponent;
-	let fixture: ComponentFixture<ContactsComponent>;
+describe('AboutComponent', () => {
+	let component: AboutComponent;
+	let fixture: ComponentFixture<AboutComponent>;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({
-			declarations: [ ContactsComponent ],
+			declarations: [ AboutComponent ],
 			imports: [ RouterTestingModule ],
 		});
 
-		fixture = TestBed.createComponent(ContactsComponent);
+		fixture = TestBed.createComponent(AboutComponent);
 		component = fixture.componentInstance;
 	});
 
-	it('Contacts initialized', () => {
+	it('AboutComponent initialized', () => {
 		expect(fixture).toBeDefined();
 		expect(component).toBeDefined();
 	});
