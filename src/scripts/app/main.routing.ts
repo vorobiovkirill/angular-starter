@@ -1,51 +1,8 @@
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const Routes = [
-	{
-		path: '',
-		component: HomeComponent,
-		data: {
-			meta: {
-				title: 'Home',
-				description: 'Home description',
-			},
-		},
-	},
-	{
-		path: 'about',
-		component: AboutComponent,
-		data: {
-			meta: {
-				title: 'About',
-				description: 'About description',
-			},
-		},
-	},
-	{
-		path: 'contacts',
-		component: ContactsComponent,
-		data: {
-			meta: {
-				title: 'Contacts',
-				description: 'Contacts description',
-			},
-		},
-	},
-	{
-		path: '404',
-		component: NotFoundComponent,
-		data: {
-			meta: {
-				title: '404',
-				description: 'Not found',
-			},
-		},
-	},
-	{
-		path: '**',
-		redirectTo: '404',
-	},
+	{ path: '', component: HomeComponent },
+	{ path: '404', component: NotFoundComponent },
+	{ path: '**', redirectTo: '404' },
 ];
