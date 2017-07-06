@@ -3,6 +3,7 @@ const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
+const DefinePlugin = require('webpack/lib/DefinePlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlElementsWebpackPlugin = require('html-elements-webpack-plugin');
@@ -12,7 +13,7 @@ const helpers = require('./helpers');
 
 const METADATA = require('./metadata-config');
 
-module.exports = function(env) {
+module.exports = function(ENV) {
 	return {
 		entry: {
 			'main': './src/scripts/main.ts',
@@ -88,7 +89,7 @@ module.exports = function(env) {
 			 */
 			new HtmlWebpackPlugin({
 				title: METADATA.title,
-				env: env,
+				env: ENV,
 				metadata: METADATA,
 				template: './src/index.html',
 				chunksSortMode: 'dependency',
@@ -140,6 +141,16 @@ module.exports = function(env) {
 				/moment[\/\\]locale/,
 				/ru\.js/
 			),
+
+			/**
+			 * @link https://webpack.github.io/docs/list-of-plugins.html#defineplugin
+			 */
+			new DefinePlugin({
+				'ENV': JSON.stringify(ENV),
+				'process.env': {
+					'ENV': JSON.stringify(ENV),
+				}
+			}),
 		],
 	}
 };
