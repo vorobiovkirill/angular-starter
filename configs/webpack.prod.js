@@ -3,11 +3,9 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
-const DefinePlugin = require('webpack/lib/DefinePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const Ngtools = require('@ngtools/webpack');
-const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 const ENV = process.env.ENV = process.env.NODE_ENV = 'production';
 
@@ -62,35 +60,6 @@ module.exports = function () {
 			 * @link https://github.com/NMFR/optimize-css-assets-webpack-plugin
 			 */
 			new OptimizeCssAssetsPlugin(),
-
-			/**
-			 * @link https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-			 */
-			new DefinePlugin({
-				'ENV': JSON.stringify(ENV),
-				'process.env': {
-					'ENV': JSON.stringify(ENV),
-				}
-			}),
-
-
-			/**
-			 * @link https://github.com/chrisvfritz/prerender-spa-plugin
-			 */
-			new PrerenderSpaPlugin(
-				path.join(__dirname, '../dist'),
-				[ '/', '/about', '/contacts' ],
-				{
-					captureAfterTime: 5000,
-					ignoreJSErrors: true,
-					maxAttempts: 10,
-					navigationLocked: true,
-					phantomOptions: '--disk-cache=true',
-					phantomPageSettings: {
-						loadImages: true
-					}
-				}
-			),
 		]
 	});
 };

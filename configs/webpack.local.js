@@ -2,8 +2,6 @@ const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
-const DefinePlugin = require('webpack/lib/DefinePlugin');
-
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
 
 module.exports = function () {
@@ -59,17 +57,5 @@ module.exports = function () {
 				},
 			],
 		},
-
-		plugins: [
-			/**
-			 * @link https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-			 */
-			new DefinePlugin({
-				'ENV': JSON.stringify(ENV),
-				'process.env': {
-					'ENV': JSON.stringify(ENV),
-				}
-			}),
-		]
 	});
 };
