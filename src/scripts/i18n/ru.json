@@ -1,0 +1,19 @@
+{
+  "MENU": {
+    "ABOUT": "О нас",
+    "HOME": "Главная",
+    "CONTACTS": "Контакты"
+  },
+  "ABOUT": {
+    "TITLE": "О нас",
+    "CONTENT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec rutrum nunc, a finibus ante. Aliquam mattis, nunc a fringilla consequat, tortor enim porttitor dolor, in tristique lectus mi a massa. Proin bibendum dolor a vehicula tempus. Praesent at ante ligula. Fusce sed augue vitae quam consequat placerat id auctor urna. Integer sagittis eget est ac luctus. Sed molestie purus eget lorem porttitor fermentum. Vivamus feugiat efficitur lorem vel sagittis. In hac habitasse platea dictumst."
+  },
+  "HOME": {
+    "TITLE": "Главная",
+    "CONTENT": "Cras semper, libero a feugiat bibendum, elit nisi dignissim sapien, eget vulputate mi ipsum consequat lectus. Nunc laoreet viverra ipsum, hendrerit interdum tellus euismod quis. Mauris in blandit quam. Donec feugiat a metus ac vehicula. Fusce condimentum, ex in feugiat porttitor, lectus enim mollis massa, eget vehicula sapien felis sed lectus. Nulla eget lacinia nunc, non porttitor tortor. Maecenas ac dui ante. Aenean in sem nec est pulvinar dapibus. Sed faucibus, dolor sagittis ultrices fringilla, elit nunc gravida lectus, eget porttitor dolor tellus at erat. In eget sodales lacus."
+  },
+  "CONTACTS": {
+    "TITLE": "Контакты",
+    "CONTENT": "Donec dapibus est eget eleifend aliquet. Fusce ut molestie tellus, ac pellentesque enim. Donec id molestie magna. Nullam condimentum vitae urna et tincidunt. Nullam efficitur non diam vitae dignissim. Sed imperdiet libero et metus viverra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue quam diam, sit amet dignissim augue iaculis ut. Nunc risus magna, lobortis vestibulum leo ut, rutrum imperdiet arcu. Quisque eget finibus lorem, nec varius tortor. Integer sit amet dapibus sapien."
+  }
+}
