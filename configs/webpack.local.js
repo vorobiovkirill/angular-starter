@@ -14,6 +14,8 @@ module.exports = function () {
 			historyApiFallback: true,
 			port: 8080,
 			open: true,
+			openPage: '',
+			disableHostCheck: true,
 			stats: {
 				colors: true,
 				hash: false,
