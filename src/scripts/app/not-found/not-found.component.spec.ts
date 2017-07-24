@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { MdCardModule } from '@angular/material';
+
 import { NotFoundComponent } from './not-found.component';
 
 describe('NotFoundComponent', () => {
@@ -10,7 +12,7 @@ describe('NotFoundComponent', () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			declarations: [ NotFoundComponent ],
-			imports: [ RouterTestingModule ],
+			imports: [ RouterTestingModule, MdCardModule ],
 		});
 
 		fixture = TestBed.createComponent(NotFoundComponent);

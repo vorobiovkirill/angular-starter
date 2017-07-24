@@ -4,11 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'app-root',
-	template: `
-		<app-menu></app-menu>
-		<app-language-switcher></app-language-switcher>
-		<router-outlet></router-outlet>
-	`,
+	templateUrl: './main.component.html',
 })
 export class MainComponent {
 	constructor(private translate: TranslateService) {

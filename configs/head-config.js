@@ -31,7 +31,12 @@ const config = {
 		/** Custom stylesheets **/
 		{
 			rel: 'stylesheet',
-			href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600,800&amp;subset=cyrillic',
+			href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500',
+			'=href': false,
+		},
+		{
+			rel: 'stylesheet',
+			href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
 			'=href': false,
 		}
 	],

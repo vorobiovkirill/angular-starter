@@ -44,7 +44,7 @@ module.exports = function () {
 						{
 							loader: 'awesome-typescript-loader',
 							query: {
-								sourceMap: true,
+								sourceMap: false,
 								inlineSourceMap: false,
 								compilerOptions: {
 									removeComments: false
