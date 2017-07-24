@@ -5,15 +5,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { HomeComponent } from './home.component';
+import { LanguageSwitcherComponent } from './language-switcher.component';
 
-describe('HomeComponent', () => {
-	let component: HomeComponent;
-	let fixture: ComponentFixture<HomeComponent>;
+describe('LanguageSwitcherComponent', () => {
+	let component: LanguageSwitcherComponent;
+	let fixture: ComponentFixture<LanguageSwitcherComponent>;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({
-			declarations: [ HomeComponent ],
+			declarations: [ LanguageSwitcherComponent ],
 			imports: [
 				HttpModule,
 				RouterTestingModule,
@@ -27,11 +27,11 @@ describe('HomeComponent', () => {
 			],
 		});
 
-		fixture = TestBed.createComponent(HomeComponent);
+		fixture = TestBed.createComponent(LanguageSwitcherComponent);
 		component = fixture.componentInstance;
 	});
 
-	it('HomeComponent initialized', () => {
+	it('LanguageSwitcherComponent initialized', () => {
 		expect(fixture).toBeDefined();
 		expect(component).toBeDefined();
 	});

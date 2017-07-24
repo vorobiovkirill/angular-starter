@@ -120,6 +120,7 @@ module.exports = function(ENV) {
 			 */
 			new CopyWebpackPlugin([
 				{from: 'src/icons/favicon', to: 'icons/favicon'},
+				{from: 'src/scripts/i18n', to: 'i18n'},
 				{from: 'src/meta'},
 			]),
 

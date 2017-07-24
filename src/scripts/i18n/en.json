@@ -1,0 +1,19 @@
+{
+  "MENU": {
+    "ABOUT": "About",
+    "HOME": "Home",
+    "CONTACTS": "Contacts"
+  },
+  "ABOUT": {
+    "TITLE": "About",
+    "CONTENT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit, tellus ac mattis congue, velit nunc aliquam lectus, sit amet sodales nisi risus at nulla. Vivamus a elementum sapien. Suspendisse auctor eros vel orci semper, eget pellentesque turpis ultricies. Duis at tincidunt odio, non volutpat odio. Suspendisse ultricies convallis accumsan. Pellentesque et ante in eros pharetra elementum a in libero. Praesent euismod a sapien lacinia vestibulum."
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "CONTENT": "Nam vitae ipsum eget lorem ullamcorper maximus. Suspendisse eu ex vitae lacus tincidunt maximus. Phasellus quam ipsum, eleifend nec sagittis sit amet, varius sit amet dui. Praesent nec orci leo. Maecenas viverra pellentesque mauris, at molestie sem commodo fringilla. Fusce a libero a ex commodo consequat. Suspendisse quis est id quam bibendum pharetra a non libero. Nam auctor, nibh nec tincidunt eleifend, leo libero porta ante, sed lobortis nibh nisi ut tortor."
+  },
+  "CONTACTS": {
+    "TITLE": "Contacts",
+    "CONTENT": "Nulla nec lobortis nisi, vitae maximus lectus. Suspendisse sagittis libero sit amet volutpat gravida. Vivamus in lacus suscipit, tempor nunc quis, sodales magna. Nullam eget euismod enim, eget viverra velit. Proin at cursus felis. Proin viverra tempus nibh, non vehicula turpis ornare vel. Aliquam id lobortis erat, eleifend pulvinar mauris. Proin iaculis pellentesque sapien a placerat. Ut egestas elementum turpis. Integer interdum nulla non ex vestibulum egestas. Maecenas facilisis venenatis urna, nec sagittis nulla venenatis non."
+  }
+}
