@@ -7,13 +7,13 @@ describe('Check homepage', () => {
 
 	it('Homepage has correct h1', () => {
 		element(by.css('h1')).getText().then(text => {
-			expect(text).toEqual('Home');
+			expect(text).toEqual('Angular Starter');
 		});
 	});
 
 	it('Homepage has correct title', () => {
 		browser.getTitle().then(text => {
-			expect(text).toEqual('Angular');
+			expect(text).toEqual('Angular Starter');
 		});
 	});
 });

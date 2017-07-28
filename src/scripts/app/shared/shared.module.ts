@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpModule, Http } from '@angular/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { MenuComponent } from './menu/menu.component';
+import { MaterialModule } from './material.module';
+
 import { LanguageSwitcherComponent } from './language-switcher/language-switcher.component';
 import { MathService } from './math-service/math.service';
 
@@ -16,18 +18,25 @@ export function HttpLoaderFactory(http: Http) {
 
 @NgModule({
 	imports     : [
+		BrowserAnimationsModule,
 		RouterModule,
 		HttpModule,
+		MaterialModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
 				useFactory: HttpLoaderFactory,
-				deps: [Http],
+				deps: [ Http ],
 			},
 		}),
 	],
-	declarations: [ MenuComponent, LanguageSwitcherComponent ],
+	declarations: [ LanguageSwitcherComponent ],
 	providers   : [ MathService ],
-	exports		: [ MenuComponent, LanguageSwitcherComponent, TranslateModule ],
+	exports		: [
+		BrowserAnimationsModule,
+		MaterialModule,
+		LanguageSwitcherComponent,
+		TranslateModule,
+	],
 })
 export class SharedModule {}

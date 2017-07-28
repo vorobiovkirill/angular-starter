@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'Angular',
-	description: 'Angular example site',
+	title: 'Angular Starter',
+	description: 'Angular Starter',
 	baseUrl: '/'
 };
