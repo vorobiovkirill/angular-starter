@@ -1,5 +1,5 @@
-import { HttpModule, Http } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -19,13 +19,14 @@ describe('LanguageSwitcherComponent', () => {
 			declarations: [ LanguageSwitcherComponent ],
 			imports: [
 				HttpModule,
+				HttpClientModule,
 				RouterTestingModule,
 				MdButtonModule,
 				TranslateModule.forRoot({
 					loader: {
 						provide: TranslateLoader,
 						useFactory: (http: HttpClient) => new TranslateHttpLoader(http, 'i18n/', '.json'),
-						deps: [Http],
+						deps: [HttpClient],
 					},
 				}),
 			],

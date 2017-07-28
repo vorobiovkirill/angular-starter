@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { HttpModule, Http } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -22,12 +22,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 		BrowserAnimationsModule,
 		RouterModule,
 		HttpModule,
+		HttpClientModule,
 		MaterialModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
 				useFactory: HttpLoaderFactory,
-				deps: [ Http ],
+				deps: [ HttpClient ],
 			},
 		}),
 	],
