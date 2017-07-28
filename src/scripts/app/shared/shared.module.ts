@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpModule, Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -12,7 +13,7 @@ import { LanguageSwitcherComponent } from './language-switcher/language-switcher
 import { MathService } from './math-service/math.service';
 
 // AoT requires an exported function for factories.
-export function HttpLoaderFactory(http: Http) {
+export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, 'i18n/', '.json');
 }
 
