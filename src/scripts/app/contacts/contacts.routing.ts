@@ -2,8 +2,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ContactsComponent } from './contacts.component';
 
-const routes: Routes = [
+export const contactRoutes: Routes = [
 	{ path: 'contacts', component: ContactsComponent },
 ];
 
-export const Routing = RouterModule.forChild(routes);
+export const Routing = RouterModule.forChild(contactRoutes);

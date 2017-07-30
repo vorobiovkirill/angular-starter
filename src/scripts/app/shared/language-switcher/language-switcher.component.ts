@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 
-import { TranslateService } from '@ngx-translate/core';
+import { LocalizeRouterService } from 'localize-router';
 
 @Component({
 	selector: 'app-language-switcher',
 	templateUrl: './language-switcher.component.html',
 })
 export class LanguageSwitcherComponent {
-	constructor(private translate: TranslateService) {}
+	constructor(
+		private localize: LocalizeRouterService) {
+	}
 
 	public switchLanguage(language: string) {
-		this.translate.use(language);
+		this.localize.changeLanguage(language);
 	}
 }
