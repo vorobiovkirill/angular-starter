@@ -2,8 +2,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AboutComponent } from './about.component';
 
-const routes: Routes = [
+export const aboutRoutes: Routes = [
 	{ path: 'about', component: AboutComponent },
 ];
 
-export const Routing = RouterModule.forChild(routes);
+export const Routing = RouterModule.forChild(aboutRoutes);

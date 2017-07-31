@@ -11,6 +11,7 @@ import { MainComponent } from './main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { Routes } from './main.routing';
+import { LocalizeRouterModule } from 'localize-router';
 
 @NgModule({
 	imports     : [
@@ -18,6 +19,7 @@ import { Routes } from './main.routing';
 		SharedModule,
 		AboutModule,
 		ContactsModule,
+		LocalizeRouterModule.forRoot(Routes),
 		RouterModule.forRoot(Routes, {useHash: false}),
 	],
 	declarations: [

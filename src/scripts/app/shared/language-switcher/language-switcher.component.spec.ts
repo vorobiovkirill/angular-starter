@@ -7,6 +7,7 @@ import { MdButtonModule } from '@angular/material';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LocalizeRouterModule } from 'localize-router';
 
 import { LanguageSwitcherComponent } from './language-switcher.component';
 
@@ -22,6 +23,7 @@ describe('LanguageSwitcherComponent', () => {
 				HttpClientModule,
 				RouterTestingModule,
 				MdButtonModule,
+				LocalizeRouterModule.forRoot(null),
 				TranslateModule.forRoot({
 					loader: {
 						provide: TranslateLoader,
