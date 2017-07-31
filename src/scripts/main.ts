@@ -6,7 +6,7 @@ require('../styles/main.sass');
 
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { MainModule } from './app/main.module';
+import { AppModule } from './app/app.module';
 
 // Depending on the env mode, enable prod mode or add debugging modules.
 if (process.env.ENV === 'production') {
@@ -15,7 +15,7 @@ if (process.env.ENV === 'production') {
 
 export function main() {
 	// Main module.
-	platformBrowserDynamic().bootstrapModule(MainModule);
+	platformBrowserDynamic().bootstrapModule(AppModule);
 }
 
 if (document.readyState === 'complete') {

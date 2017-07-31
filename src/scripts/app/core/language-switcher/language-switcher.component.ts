@@ -8,8 +8,8 @@ import { LocalizeRouterService } from 'localize-router';
 })
 export class LanguageSwitcherComponent {
 	constructor(
-		private localize: LocalizeRouterService) {
-	}
+		private localize: LocalizeRouterService,
+	) {}
 
 	public switchLanguage(language: string) {
 		this.localize.changeLanguage(language);
