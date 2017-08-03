@@ -16,6 +16,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
+export function localizeLoaderFactory(translate: TranslateService, location: Location, http: Http) {
+	return new StaticParserLoader(translate, location, http, 'assets/i18n/locales.json');
+}
+
 @NgModule({
 	imports     : [
 		BrowserModule,
@@ -25,8 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		MaterialModule,
 		LocalizeRouterModule.forRoot([], {
 			provide: LocalizeParser,
-			useFactory: (translate, location, http) =>
-				new StaticParserLoader(translate, location, http, 'assets/i18n/locales.json'),
+			useFactory: localizeLoaderFactory,
 			deps: [TranslateService, Location, Http],
 		}),
 		TranslateModule.forRoot({
