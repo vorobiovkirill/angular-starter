@@ -1,5 +1,4 @@
 const helpers = require('./helpers');
-const path = require('path');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
@@ -31,7 +30,7 @@ module.exports = function () {
 			 */
 			new Ngtools.AotPlugin({
 				tsConfigPath: helpers.root('tsconfig.webpack.json'),
-				entryModule: helpers.root('src/scripts/app/app.module#AppModule'),
+				entryModule: helpers.root('src/app/app.module#AppModule'),
 			}),
 
 			/**

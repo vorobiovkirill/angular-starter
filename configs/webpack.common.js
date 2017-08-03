@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -16,7 +15,7 @@ const METADATA = require('./metadata-config');
 module.exports = function(ENV) {
 	return {
 		entry: {
-			'main': './src/scripts/main.ts',
+			'main': './src/main.ts',
 		},
 
 		performance: {
@@ -119,10 +118,7 @@ module.exports = function(ENV) {
 			 * @link https://www.npmjs.com/package/copy-webpack-plugin
 			 */
 			new CopyWebpackPlugin([
-				{from: 'src/icons/favicon', to: 'icons/favicon'},
-				{from: 'src/scripts/i18n', to: 'i18n'},
 				{from: 'src/assets', to: 'assets'},
-				{from: 'src/img', to: 'img'},
 				{from: 'src/meta'},
 			]),
 

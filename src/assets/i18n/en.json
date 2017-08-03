@@ -2,7 +2,8 @@
   "MENU": {
     "ABOUT": "About",
     "HOME": "Home",
-    "CONTACTS": "Contacts"
+    "CONTACTS": "Contacts",
+    "CLOSE": "Close"
   },
   "ABOUT": {
     "TITLE": "About",

@@ -21,7 +21,7 @@
 			</a>
 			<hr>
 		</md-nav-list>
-		<button md-button (click)="sidebar.close()">CLOSE</button>
+		<button md-button (click)="sidebar.close()">{{'MENU.CLOSE' | translate}}</button>
 	</md-sidenav>
 	<div>
 		<md-toolbar color="primary">
@@ -30,7 +30,7 @@
 			</button>
 			<div class="app-toolbar">
 				<h1>Angular Starter</h1>
-				<img class="toolbar-logo" src="/img/angular-logo.svg" alt="Angular Logo" width="40" height="40">
+				<img class="toolbar-logo" src="/assets/img/angular-logo.svg" alt="Angular Logo" width="40" height="40">
 				<div>
 					<app-language-switcher></app-language-switcher>
 				</div>

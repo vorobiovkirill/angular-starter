@@ -2,7 +2,8 @@
   "MENU": {
     "ABOUT": "О нас",
     "HOME": "Главная",
-    "CONTACTS": "Контакты"
+    "CONTACTS": "Контакты",
+    "CLOSE": "Закрыть"
   },
   "ABOUT": {
     "TITLE": "О нас",
