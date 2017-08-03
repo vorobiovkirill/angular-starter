@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/LehaMotovilov/angular-starter.svg?branch=master)](https://travis-ci.org/LehaMotovilov/angular-starter)
 [![Codecov badge](https://codecov.io/gh/LehaMotovilov/angular-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/LehaMotovilov/angular-starter)
 [![Stack Share](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/LehaMotovilov/angular-starter)
-[![Dependency Status](https://david-dm.org/LehaMotovilov/angular-starter.svg)](https://david-dm.org/LehaMotovilov/angular-starter.svg)
+[![Dependency Status](https://david-dm.org/LehaMotovilov/angular-starter.svg)](https://david-dm.org/LehaMotovilov/angular-starter)
 ___
 
 Check [demo](https://angular-starter.netlify.com/)	
