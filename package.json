@@ -110,7 +110,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "2.5.*",
-    "codecov": "2.2.*",
+    "codecov": "~2.3.0",
     "istanbul-instrumenter-loader": "3.0.*",
     "jasmine-core": "2.7.*",
     "jasmine-spec-reporter": "4.1.*",
