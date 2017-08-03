@@ -6,8 +6,8 @@ exports.config = {
 	baseUrl: 'http://localhost:3000/',
 
 	specs: [
-		helpers.root('src/scripts/**/**.e2e.ts'),
-		helpers.root('src/scripts/**/*.e2e.ts')
+		helpers.root('src/app/**/**.e2e.ts'),
+		helpers.root('src/app/**/*.e2e.ts')
 	],
 
 	exclude: [],
