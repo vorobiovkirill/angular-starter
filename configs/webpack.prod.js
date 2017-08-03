@@ -31,7 +31,7 @@ module.exports = function () {
 			 */
 			new Ngtools.AotPlugin({
 				tsConfigPath: helpers.root('tsconfig.webpack.json'),
-				entryModule: helpers.root('src/scripts/app/main.module#MainModule'),
+				entryModule: helpers.root('src/scripts/app/app.module#AppModule'),
 			}),
 
 			/**

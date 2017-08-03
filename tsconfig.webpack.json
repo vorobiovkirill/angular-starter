@@ -36,6 +36,6 @@
   },
   "angularCompilerOptions": {
     "genDir": ".",
-    "entryModule": "src/scripts/app/main.module#MainModule"
+    "entryModule": "src/scripts/app/app.module#AppModule"
   }
 }

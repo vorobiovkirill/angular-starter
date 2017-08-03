@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { LocalizeRouterModule } from 'localize-router';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { MaterialModule } from './material.module';
-
-import { LanguageSwitcherComponent } from './language-switcher/language-switcher.component';
-import { MathService } from './math-service/math.service';
 
 // AoT requires an exported function for factories.
 export function HttpLoaderFactory(http: HttpClient) {
@@ -19,11 +17,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
 	imports     : [
+		BrowserModule,
 		BrowserAnimationsModule,
-		RouterModule,
 		HttpModule,
 		HttpClientModule,
 		MaterialModule,
+		LocalizeRouterModule.forRoot([]),
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
@@ -32,13 +31,15 @@ export function HttpLoaderFactory(http: HttpClient) {
 			},
 		}),
 	],
-	declarations: [ LanguageSwitcherComponent ],
-	providers   : [ MathService ],
+	declarations: [],
+	providers   : [],
 	exports		: [
+		BrowserModule,
 		BrowserAnimationsModule,
 		MaterialModule,
-		LanguageSwitcherComponent,
 		TranslateModule,
+		HttpModule,
+		LocalizeRouterModule,
 	],
 })
 export class SharedModule {}
