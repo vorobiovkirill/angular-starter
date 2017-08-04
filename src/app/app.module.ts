@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { LocalizeRouterModule } from 'localize-router';
+import { localizeLoader } from './shared/loaders/localizeRouterLoader';
+
+import { TranslateModule } from '@ngx-translate/core';
+import { translateLoader } from './shared/loaders/translateLoader';
+
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 
@@ -20,6 +26,8 @@ import { AppComponent } from './app.component';
 		ContactsModule,
 		NotFoundModule,
 		RouterModule.forRoot([]),
+		TranslateModule.forRoot({ loader: translateLoader }),
+		LocalizeRouterModule.forRoot([], localizeLoader),
 	],
 	declarations: [ AppComponent ],
 	bootstrap   : [ AppComponent ],
