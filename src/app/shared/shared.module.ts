@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
-import { LocalizeRouterModule } from 'localize-router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { MaterialModule } from './material.module';
@@ -16,7 +15,6 @@ import { MaterialModule } from './material.module';
 		HttpModule,
 		HttpClientModule,
 		MaterialModule,
-		LocalizeRouterModule,
 		TranslateModule,
 	],
 	declarations: [],
@@ -27,7 +25,6 @@ import { MaterialModule } from './material.module';
 		MaterialModule,
 		TranslateModule,
 		HttpModule,
-		LocalizeRouterModule,
 	],
 })
 export class SharedModule {}
