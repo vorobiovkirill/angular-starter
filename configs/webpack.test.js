@@ -1,8 +1,8 @@
-const webpack = require('webpack');
 const path = require('path');
 
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const helpers = require('./helpers');
 
@@ -25,6 +25,12 @@ module.exports = function() {
 
 	config.resolve = {
 		extensions: ['.ts', '.js'],
+	};
+
+	config.output = {
+		path: helpers.root('dist'),
+		filename: 'js/[name].[hash].js',
+		publicPath: '/',
 	};
 
 	config.module = {
@@ -84,6 +90,14 @@ module.exports = function() {
 			path.resolve(__dirname, './src'),
 			{}
 		),
+
+		/**
+		 * @link https://www.npmjs.com/package/copy-webpack-plugin
+		 */
+		new CopyWebpackPlugin([
+			{from: 'src/assets', to: 'assets'},
+			{from: 'src/meta'},
+		]),
 
 		/**
 		 * @link https://webpack.github.io/docs/list-of-plugins.html#defineplugin
