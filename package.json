@@ -28,6 +28,7 @@
     "build": "npm run build:local",
     "build:prod": "npm run rmrf && ENV=prod webpack --config configs/webpack.prod.js --hide-modules=true && rimraf dist/webpack-assets.json",
     "build:local": "npm run rmrf && ENV=dev webpack --config configs/webpack.local.js --hide-modules=true",
+    "build:doc": "npm run compodoc && cp -R documentation dist",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "tslint \"src/**/*.ts\" --config ./tslint.json --project ./tsconfig.json --type-check --format codeFrame",
     "lint:css": "sass-lint --config ./.sass-lint.yml 'src/**/*.sass' --verbose",
@@ -42,7 +43,8 @@
     "webdriver-manager": "webdriver-manager",
     "webdriver:start": "npm run webdriver-manager start",
     "webdriver:update": "webdriver-manager update",
-    "rmrf": "rimraf dist coverage"
+    "compodoc": "./node_modules/.bin/compodoc -p ./tsconfig.json",
+    "rmrf": "rimraf dist coverage documentation"
   },
   "browserslist": [
     "> 1%",
@@ -109,6 +111,7 @@
     "zone.js": "0.8.*"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.0.0-beta.14",
     "@types/jasmine": "2.5.*",
     "codecov": "2.3.*",
     "istanbul-instrumenter-loader": "3.0.*",
