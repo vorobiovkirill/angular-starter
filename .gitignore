@@ -14,9 +14,9 @@ npm-debug.log
 # Coverage
 /coverage/
 
-# Dist #
+# Dist
 /dist
+/documentation
 
-# IDE #
+# IDE
 .idea/
-*.swp
