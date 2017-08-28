@@ -16,6 +16,7 @@
 		"no-require-imports": false,
 		"no-var-requires": false,
     "no-string-literal": false,
-		"arrow-parens": false
+		"arrow-parens": false,
+    "no-submodule-imports": [true, "rxjs", "@angular", "core-js", "zone.js"]
 	}
 }
